@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>&lt;BR&gt; Works</title>
+    <meta name="description" content="Weboldal, webshop és arculattervezés.
+Teljesen reszponzív, mobilbarát weboldalak és webshopok, úgy, ahogy azt te megálmodtad.">
+    <link rel="icon" type="image/png" sizes="925x925" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="925x925" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="925x925" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="925x925" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="925x925" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/card-3-column-animation-shadows-images.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right.css">
+    <link rel="stylesheet" href="assets/css/Effective-Pricing-Cards.css">
+    <link rel="stylesheet" href="assets/css/Faq-by-pomdre-1.css">
+    <link rel="stylesheet" href="assets/css/Faq-by-pomdre.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Juvi---Push-Empty-Space-20px.css">
+    <link rel="stylesheet" href="assets/css/Modern-Contact-Form.css">
+    <link rel="stylesheet" href="assets/css/News-Cards.css">
+    <link rel="stylesheet" href="assets/css/Pricing-Tables-1.css">
+    <link rel="stylesheet" href="assets/css/Pricing-Tables.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-1.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product.css">
+</head>
+<script>
+
+    var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { animation: caret 1s steps(1) infinite; border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!--menü start-->
+    <!-- START HERE -->
+    <!--menü-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top mynav" id="main-nav">
+        <a href="#" class="navbar-brand">
+            <img src="/assets/img/logo_white.png" height="60" alt="BR Works">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#hero" class="nav-item nav-link active">Főoldal</a>
+                <a href="#about" class="nav-item nav-link">Rólunk</a>
+                <a href="#price" class="nav-item nav-link">Árak</a>
+                <a href="#contact" class="nav-item nav-link">Kapcsolat</a>
+
+            </div>
+
+        </div>
+    </nav>
+    <!--menü vége-->
+
+    <!--főoldal-->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container">
+
+            <div class="row justify-content-left">
+                <div class="col-xl-6 col-lg-8">
+
+                    <h1>Legyen neked is saját <a href="" class="typewrite" data-period="2000"
+                            data-type='[ " weboldalad", " webshopod" , "arculatod", "applikációd"]'>
+                            <span class="wrap"></span>
+                        </a> </h1>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!--főoldal vége-->
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+    </script>
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+
+    <script>
+        $('body').scrollspy({ target: '#main-nav' });
+
+        // Add smooth scrolling
+        $('#main-nav a').on('click', function (e) {
+            // Check for a hash value
+            if (this.hash !== '') {
+                // Prevent default behavior
+                e.preventDefault();
+
+                // Store hash
+                const hash = this.hash;
+
+                // Animate smooth scroll
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
+                    // Add hash to URL after scroll
+                    window.location.hash = hash;
+                });
+            }
+        });
+    </script>
+    <!--menü end-->
+    <div id="about">     <div class="container">
+        <div class="row clearmargin clearpadding row-image-txt" style="background: rgb(255,255,255);">
+            <div class="col-xs-12 col-sm-6 col-md-6 clearmargin clearpadding col-sm-push-6"><img
+                    style="width: 100%;background: #ffffff;" src="assets/img/logo.png"></div>
+            <div class="align-self-center col-xs-12 col-sm-6 col-md-6 col-sm-pull-6"
+                style="padding: 20px;background: #ffffff;color: rgb(0,0,0);">
+                <h1 class="text-left d-xl-flex" style="color: rgb(0,0,0);text-align: left;">Váltsd valóra álmaidat!</h1>
+                <hr>
+                <p style="color: rgb(0,0,0);">Minőségi munkák megfizethető áron!</p>
+                <div style="text-align:center"><a href="#contact"><button class="btn btn-light btn-lg" type="button"
+                    style="background: #fcc202;">Ajánlatot kérek!</button></a></div>
+            </div>
+        </div>
+    </div>  </div>
+
+    <div class="features-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" data-aos="zoom-in">Miért válassz minket?</h2>
+                <hr>
+            </div>
+            <div class="row features" data-aos="zoom-in">
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-mobile-phone icon" style="color: #FCC202;"></i>
+                    <h3 class="name">Reszponzív</h3>
+                    <p class="description">Minden weboldal úgy készül el, hogy az tökéletesen mutasson minden eszközön.
+                        Megfelelően jelenik meg mobilon, tableten, laptopon és monitoron. Ezért,&nbsp;<strong>további
+                            költség NEM kerül felszámolásra</strong>.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-money icon" style="color: #FCC202;"></i>
+                    <h3 class="name">Költséghatékony</h3>
+                    <p class="description">Az ajánlatainkat úgy készítjük el, hogy azok a lehető <strong>legjobb
+                            ár-érték arány</strong>ban legyenek. Nem dolgozunk havidíjakkal, amit elkészítünk, az örökre
+                        a tied marad.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-phone icon"
+                        style="border-color: #fcc202;color: rgb(252,194,2);"></i>
+                    <h3 class="name">Konzultációk</h3>
+                    <p class="description">Azt szeretnénk, hogy az elkészült weboldal, applikáció vagy arculat valóban, olyan
+                        legyen, ahogy azt te megálmodtad, ezért a legtöbb szolgáltatóval ellentétben mi akár <strong>4
+                            órányi konzultáció</strong>t biztosítunk, ami természetesen bővíthető.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-certificate icon" style="color: #FCC202;"></i>
+                    <h3 class="name">Garancia</h3>
+                    <p class="description">Mi bízunk abban, hogy ügyfeleink elégedettek lesznek a munkánkkal, ezért
+                        minden elkészített projektünkre <strong>1 év garanciát</strong> vállalunk.&nbsp;&nbsp;</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-gears icon" style="color: #FCC202;"></i>
+                    <h3 class="name">Utólagos támogatás</h3>
+                    <p class="description">Nem hagyunk magadra később sem! Az elkészült projekt után, ha szeretnéd
+                        díjmentesen segítünk a telepítésben!</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-heart icon"
+                        style="border-color: rgb(252,194,2);color: #fcc202;"></i>
+                    <h3 class="name">Felhasználóbarát</h3>
+                    <p class="description">Mi is tudjuk, hogy egy weboldal vagy applikáció akkor jó, ha könnyen kezelhető és átlátható.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="highlight-phone" style="background: rgb(0,0,0);padding-bottom: 50px;">
+        <div class="container" style="color: rgb(0,0,0);">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2 data-aos="fade" style="color: rgb(255,255,255);">Kérd egyedi ajánlatunkat!</h2>
+                        <p data-aos="fade" style="color: rgb(255,255,255);">Hívj minket telefonon, keress email-ben vagy
+                            töltsd ki űrlapunkat és mi felvesszük veled a kapcsolatot!</p>
+                            
+                            <a class="btn btn-primary"
+                            role="button" data-aos="fade" href="move.html"
+                            style="background: #fcc202;color: rgb(0,0,0);letter-spacing: 1px;">Hogyan működik egy megrendelés?</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-none d-md-block phone-mockup"><img data-aos="slide-up" class="device"
+                            src="assets/img/phonee.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row clearmargin clearpadding row-image-txt">
+            <div class="col-xs-12 col-sm-6 col-md-6 clearmargin clearpadding col-sm-push-6"
+                style="height: 400px;background: url(&quot;assets/img/website.png&quot;) center / cover;">
+                <div></div>
+            </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-sm-pull-6" style="padding: 20px;background: #ffffff;">
+            <h1 style="color: rgb(0,0,0);">Weboldal</h1>
+            <hr>
+            <p style="color: rgb(7,0,0);">Minden weboldal a lehető legnagyobb gondosággal, a megrendelő igényeinek megfelelően készül el. Munkáinkhoz  <span style="color: #FCC202">jog tiszta képeket</span> használunk, ezeket különböző oldalakról vásároljuk meg és ingyenesen biztosítjuk ügyfeleink számára. Az elkészült weboldalak minden eszközre(mobil, tablet, laptop, PC) tökéletesen optimalizálva vannak.<br>
+            
+              
+<br>
+            Minden weboldal más, ezért az áruk is eltérő, az árképzés az adott munka összetettségétől és a ráfordított munka mennyiségétől függ. Miután a megrendelő felvázolta elképzeléseit, küldünk egy részletes árajánlatot. A weboldal pontos árát, mindig a munka elkezdése előtt határozzuk meg.
+            <br><br>Miután a weboldal elkészült segítünk a telepítésben és az oldal használatának elsajátításában. Ez a webshopoknál különösen fontos, azt szeretnénk, hogy ügyfeleink olyan terméket kapjanak kézhez, amit utána könnyűszerrel tudnak használni.
+        </p>
+            <div style="text-align:center"></div>
+        </div>
+    </div>
+    
+    <div class="row clearmargin clearpadding row-image-txt">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-sm-pull-6" style="padding: 20px;background: #ffffff;">
+            <h1 style="color: rgb(0,0,0);">Arculat</h1>
+            <hr><h3>Tűnj ki a tömegből!</h3>
+            <p style="color: rgb(0,0,0);">Egyedi logo tervezés, személyre szabott meghívók, plakátok, névjegykártyák készítése.<br> <br>Segítünk feldobni a közösségi média platformjaidat. Legyen szó Facebookról, Twiterről vagy Instagramról, mi gondoskodunk róla, hogy tökéletes legyen! Elkészítjük a hozzád vagy cégedhez legjobban illő borítóképeket és egységesítjük bejegyzéseidet.<br><br>Minden tervezést alapos piackutatás előz meg, ahol elemezzük a kokurenciákat és kiválasztjuk melyik színek, logo és arculat illene hozzád a legjobban.</p>
+            <div style="text-align:center"></div>
+        </div>
+        <div class="hidden col-xs-12 col-sm-6 col-md-6 clearmargin clearpadding col-sm-push-6"
+            style="height: 400px;background: url(&quot;assets/img/arculat.png&quot;) center / cover no-repeat;"
+            title="dfsd">
+            <div></div>
+        </div>
+    </div>
+   <div class="row clearmargin clearpadding row-image-txt">
+        <div class="hidden col-xs-12 col-sm-6 col-md-6 clearmargin clearpadding col-sm-push-6"
+            style="height: 400px;background: url(&quot;assets/img/mobilee.png&quot;) center / cover;">
+            <div></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-sm-pull-6" style="padding: 20px;background: #ffffff;">
+            <h1 style="color: rgb(0,0,0);">Applikáció</h1>
+            <hr><h3>Van egy szuper ötleted?</h3>
+            <h5>Mi megcsináljuk!</h5>
+            <p style="color: rgb(0,0,0);">Legyen szó saját elképzelésedről, játékról vagy egy vállakozás számára szánt mobil applikációról, nálunk biztosan az igényeidnek megfelelő szolgáltatásban fogsz részesülni.<br> <br>Fontos kiemelni, hogy mi nem futószallagon készítjük ezeket. Segítünk ügyfeleinknek, hogy végeredményben pontosan azt kapják, amit szeretnének. Éppen ezért a fejlesztés megkezdésétől egészen a publikálásig, folyamatosan kommunikálunk veled, és az igényeidhez mérten haladunk tovább. <!-- Érthető okokból ez a kommunikáció olyannyira folytonos és gyakori, hogy voltak ügyfeleink, akik elmondásuk alapján úgy érezték mintha a fejlesztő csapat részei lennének. Természetesen ezek a kozultációk csak tőled függnek, ha úgy érzed kevesebbre van szükséged mi annak függvényében dolgozunk. -->
+                 <br> 
+            </p>
+            <div style="text-align:center"></div>
+        </div>
+    </div> 
+
+    <!-- <div class="highlight-phone" style="background: url(&quot;assets/img/pop.png&quot;) center / cover no-repeat, #000000;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro"></div>
+                    <h2 data-aos="fade-up" style="color: rgb(255,255,255);">Önéletrajz helyett weboldal!</h2>
+                    <h2 data-aos="fade-up" style="color: rgb(255,255,255);">Indulj előnnyel a munkaerőpiacon!</h2>
+                    <p data-aos="fade-up" style="font-size: 17px;color: rgb(255,255,255);"><strong>Legyen neked is saját bemutatkozó oldalad!&nbsp;</strong></p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="justify-content-end align-items-baseline align-content-stretch align-self-end">
+                        <div class="Push-20"></div>
+                        <div class="Push-20"></div>
+                        <div class="Push-20"></div><button class="btn text-center d-xl-flex align-items-center justify-content-xl-center align-items-xl-center" data-aos="fade-up" type="button" style="color: rgb(1,20,38);width: 100%;height: 84px;background: #fcc202;"><strong>Kattints ide a részletekért!</strong></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="price"><section class="pricing-table"
+        style="border-color: rgb(255,255,255);background: url(&quot;assets/img/prices.png&quot;) no-repeat;background-size: cover;">
+        <div class="container">
+            <div class="center">
+                <h2>Ajánlataink</h2>
+            </div>
+            <div class="pricing-area text-center">
+                <div class="row">
+                    <div class="col-sm-4 plan price red wow fadeInDown">
+                        <ul class="list-group">
+                            <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                <h1>Weboldal</h1><span class="price">80.000 Ft-tól</span>
+                            </li>
+                            <li class="list-group-item"><span>Teljes reszponzívitás&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="Tökéletes megjelenés minden készüléken"></i></li>
+                            <li class="list-group-item"><span>Keresésoptimalizálás&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="Segítünk, hogyan érhetnél el jobb helyet a Google kereséseknél"></i></li>
+                            <!-- <li class="list-group-item"><span>Ingyen logó és arculattervezés</span></li> -->
+                            <li class="list-group-item"><span>4 óra konzultáció&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="A legtöbb cég mindössze 1 órányi konzultációt biztosít"></i></li>
+                            <li class="list-group-item"><span>Ingyenes telepítés<br></span></li>
+                            <li class="list-group-item"><span>1 év garancia</span></li>
+                            <li class="list-group-item plan-action"><a class="btn" href="#contact">Érdekel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 plan price green wow fadeInDown">
+                        <ul class="list-group">
+                            <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                <h1>Webshop</h1><span class="price">130.000 Ft-tól</span>
+                            </li>
+                            <li class="list-group-item"><span>Teljes reszponzívitás&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="Tökéletes megjelenés minden készüléken"></i></li>
+                            <li class="list-group-item"><span>Keresésoptimalizálás&nbsp;<i
+                                        class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                        title="Segítünk, hogyan érhetnél el jobb helyet a Google kereséseknél"></i></span>
+                            </li>
+<!--                             <li class="list-group-item"><span>Ingyen logó és arculattervezés</span></li>
+ -->                            <li class="list-group-item"><span title="test">4 óra konzultácó&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="A legtöbb cég mindössze 1 órányi konzultációt biztosít"></i></li>
+                            <li class="list-group-item"><span>Ingyenes telepítés és betanítás a használatra</span></li>
+                            <li class="list-group-item"><span>1 év garancia</span></li>
+                            <li class="list-group-item plan-action"><a class="btn" href="#contact">Érdekel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 plan price yellow wow fadeInDown">
+                        <ul class="list-group">
+                            <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                <h1 style="font-size: 34px;">Régi weboldal felújítása</h1><span class="price">30.000
+                                    Ft-tól</span>
+                            </li>
+                            <li class="list-group-item"><span>Reszponzivítás beállítása&nbsp;</span><i
+                                class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                title="Ha az ügyfelünk kéri, átalakíthatjuk a régi weboldalt mobilbaráttá"></i></li>
+                            <li class="list-group-item"><span>Keresésoptimalizálás&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="Segítünk, hogyan érhetnél el jobb helyet a Google kereséseknél"></i></li>
+                            <li class="list-group-item"><span>2 órányi konzultáció&nbsp;</span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="A legtöbb cég mindössze 1 órányi konzultációt biztosít"></i></li>
+                            <li class="list-group-item"><span>Ingyenes telepítés<br></span></li>
+                            <li class="list-group-item"><span>1 év garancia</span></li>
+                            <li class="list-group-item plan-action"><a class="btn" href="#contact">Érdekel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                   <div class="pricing-area text-center">
+                    <div class="row">
+
+
+
+
+                        <div class="col-sm-4 offset-sm-2 offset-lg-1 offset-xl-1 plan price red wow fadeInDown">
+                            <ul class="list-group">
+                                <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                    <h1 style="font-size: 34px;">Logo és Arculattervezés</h1><span class="price">30.000
+                                        Ft-tól</span>
+                                </li>
+                                <li class="list-group-item"><span>3 óra konzutáció</span></li>
+                                <li class="list-group-item"><span>Piackutatás</span></li>
+                                <li class="list-group-item"><span>Logo tervezés</span></li>
+                                <li class="list-group-item"><span>Arculat tervezés</span></li>
+                    
+
+
+                                <li class="list-group-item plan-action"><a class="btn" href="#contact">Érdekel</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+                        
+                        <div class="col-sm-4 offset-sm-0 offset-lg-2 offset-xl-2 plan price green wow fadeInDown">
+                            <ul class="list-group">
+                                <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                    <h1 style="font-size: 34px;">Android+iOS alkalmazás</h1><span class="price">480.000 Ft-tól</span>
+                                </li>
+                                <li class="list-group-item"><span>Ingyen design és arculattervezés</span></li>
+                                <li class="list-group-item"><span>1 év garancia</span></li>
+                                <li class="list-group-item"><span>8 óra konzultáció</span></li>
+                                <li class="list-group-item"><span>Utólagos támogatás </span><i
+                                    class="fa fa-question-circle-o" data-toggle="tooltip" data-bs-tooltip=""
+                                    title="Segítünk beüzemelni az applikációt "></i></li>
+                               
+                                <li class="list-group-item plan-action"><a class="btn" href="#">Érdekel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+                <!-- <div class="pricing-area text-center">
+                    <div class="row">
+                        <div class="col-sm-4 offset-sm-4 offset-lg-4 offset-xl-4 plan price yellow wow fadeInDown">
+                            <ul class="list-group">
+                                <li class="list-group-item heading" style="background: rgb(0,0,0);">
+                                    <h1 style="font-size: 34px;">Logo és Arculattervezés</h1><span class="price">30.000
+                                        Ft-tól</span>
+                                </li>
+                                <li class="list-group-item"><span>3 óra konzutáció</span></li>
+                                <li class="list-group-item"><span>Piackutatás</span></li>
+                                <li class="list-group-item"><span>Logo tervezés</span></li>
+                                <li class="list-group-item"><span>Arculat tervezés</span></li>
+                                <li class="list-group-item"><span>Plakát design</span></li>
+                                <li class="list-group-item"><span>Névjegykártya készítés</span></li>
+                                <li class="list-group-item"><span>Meghívó tervezés</span></li>
+
+
+                                <li class="list-group-item plan-action"><a class="btn" href="#contact">Érdekel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section></div>
+
+
+ <div id="contact">   <div class="contact-clean"
+    style="background: url(&quot;assets/img/contact.png&quot;) no-repeat, rgb(0,0,0);border-style: none;border-color: rgb(255,255,255);background-size: cover, auto;">
+    <form style="background: rgb(255,255,255);" data-bss-subject="BR Works"
+        data-bss-recipient="55860975640a0f9a3ff76fb961530f73">
+        <h2 class="text-center" style="color: rgb(0,0,0);">Kapcsolat</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Név" required="">
+        </div>
+        <div class="form-group"><input class="form-control" type="tel" placeholder="Telefonszám" name="telefon">
+        </div>
+        <div class="form-group"><input class="form-control" type="email" placeholder="Email" name="email"
+                required=""></div><label>Mit szeretnél?</label>
+        <div class="form-group">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"
+                    name="weboldal"><label class="form-check-label" for="formCheck-1">Weboldal</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label
+                    class="form-check-label" for="formCheck-4">Webshop</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"
+                    name="webshop"><label class="form-check-label" for="formCheck-3">Weboldal felújítás</label>
+            </div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"
+                    name="android"><label class="form-check-label" for="formCheck-2">Android app</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"
+                    name="ios"><label class="form-check-label" for="formCheck-7">iOS app</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"
+                    name="android+ios"><label class="form-check-label" for="formCheck-6">Android+iOS app</label>
+            </div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"
+                    name="arculat"><label class="form-check-label" for="formCheck-5">Arculat + logo</label></div>
+        </div>
+        <div class="form-group"><textarea class="form-control" name="message"
+                placeholder="Írd le kérlek az elképzeléseidet" rows="14"></textarea></div>
+        <div class="form-group">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8"
+                    name="adatkezelés" required=""><label class="form-check-label" for="formCheck-8">Elfogadom az
+                    adatkezelési nyilatkozatot</label></div>
+        </div>
+        <div class="form-group"><button class="btn btn-secondary" type="submit"
+                style="color: rgb(255,255,255);background: #fcc202;">Küldés</button></div>
+    </form>
+</div></div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.instagram.com/brworks.hu/"><i class="icon ion-social-instagram"></i></a><a href="https://www.facebook.com/brworks.hu"><i
+                        class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Főoldal</a></li>
+                <li class="list-inline-item"><a href="adat.html">Adatvédelem</a></li>
+                <!-- <li class="list-inline-item"><a href="#">Blog</a></li> -->
+                <li class="list-inline-item"><a href="contact.html">Elérhetőségek</a></li>
+            </ul>
+            <p class="copyright">BR Works © <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/Faq-by-pomdre.js"></script>
+    <script src="assets/js/Pricing-Tables-1.js"></script>
+    <script src="assets/js/Pricing-Tables.js"></script>
+    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product.js"></script>
+</body>
+
+</html>
